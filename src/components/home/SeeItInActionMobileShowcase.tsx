@@ -1,57 +1,23 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Smartphone, CheckCircle2, TrendingUp, Cpu, Sparkles } from 'lucide-react';
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const SeeItInActionMobileShowcase: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const [activeFrame, setActiveFrame] = useState<number>(2); // 2 is center default
 
-  // Scroll Progress Scrubbing
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-
-  // Scroll-linked transforms
-  const headerOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0.3, 1]);
-  const headerY = useTransform(scrollYProgress, [0.1, 0.3], [30, 0]);
-
-  const frame1Y = useTransform(scrollYProgress, [0.2, 0.5], [45, 0]);
-  const frame1Opacity = useTransform(scrollYProgress, [0.2, 0.45], [0.4, 1]);
-
-  const frame2Y = useTransform(scrollYProgress, [0.25, 0.55], [70, 0]);
-  const frame2Scale = useTransform(scrollYProgress, [0.25, 0.55], [0.95, 1.02]);
-  const frame2Opacity = useTransform(scrollYProgress, [0.25, 0.5], [0.5, 1]);
-
-  const frame3Y = useTransform(scrollYProgress, [0.3, 0.6], [45, 0]);
-  const frame3Opacity = useTransform(scrollYProgress, [0.3, 0.55], [0.4, 1]);
-
-  const chartHeight = useTransform(scrollYProgress, [0.4, 0.75], ['10%', '100%']);
-
-  // Dynamic active focus switching based on scroll position
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (latest < 0.4) {
-      setActiveFrame(1);
-    } else if (latest >= 0.4 && latest < 0.65) {
-      setActiveFrame(2);
-    } else {
-      setActiveFrame(3);
-    }
-  });
-
   return (
-    <section 
-      ref={sectionRef} 
-      className="py-28 bg-[#f5f3ef] border-t border-border-subtle relative overflow-hidden"
-    >
+    <section className="py-24 bg-[#f5f3ef] border-t border-border-subtle relative overflow-hidden">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accent-primary/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-accent-primary/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
-        {/* Section Header with Scroll Fade Reveal */}
+        {/* Section Header */}
         <motion.div 
-          style={{ opacity: headerOpacity, y: headerY }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-border-subtle"
         >
           <div className="space-y-3 max-w-2xl">
@@ -84,21 +50,26 @@ export const SeeItInActionMobileShowcase: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* 3 Smartphone Mockup Devices with Scroll-Driven Progressive Assembly */}
+        {/* 3 Smartphone Mockup Devices (Clean & Ultra-Professional Chassis) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
           
           {/* FRAME 01: CAPTURE */}
           <motion.div
-            style={{ y: frame1Y, opacity: frame1Opacity }}
-            whileHover={{ y: -10, scale: 1.02 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ y: -6 }}
             onClick={() => setActiveFrame(1)}
-            className={`cursor-pointer transition-all duration-300 ${
-              activeFrame === 1 ? 'ring-2 ring-accent-primary rounded-[42px] shadow-[0_25px_50px_rgba(79,70,229,0.2)]' : 'opacity-95 hover:opacity-100'
-            }`}
+            className="cursor-pointer group"
           >
-            <div className="w-full max-w-[280px] mx-auto h-[540px] rounded-[40px] bg-[#ffffff] border-[7px] border-[#292524] shadow-xl p-4 flex flex-col justify-between relative overflow-hidden">
+            <div className={`w-full max-w-[280px] mx-auto h-[540px] rounded-[40px] bg-white border-[7px] border-[#1c1917] p-4 flex flex-col justify-between relative overflow-hidden transition-all duration-300 ${
+              activeFrame === 1 
+                ? 'shadow-[0_20px_50px_rgba(79,70,229,0.18)] scale-[1.02]' 
+                : 'shadow-xl opacity-90 group-hover:opacity-100'
+            }`}>
               {/* Dynamic Island Notch */}
-              <div className="w-24 h-4 bg-[#292524] rounded-full mx-auto mb-3 shrink-0" />
+              <div className="w-24 h-4 bg-[#1c1917] rounded-full mx-auto mb-3 shrink-0" />
               
               {/* Screen Content: Capture */}
               <div className="flex-1 space-y-4 pt-1">
@@ -132,29 +103,34 @@ export const SeeItInActionMobileShowcase: React.FC = () => {
               </div>
 
               {/* Bottom Home Indicator */}
-              <div className="h-1 bg-[#292524]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
+              <div className="h-1 bg-[#1c1917]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
             </div>
 
-            {/* Label Below */}
-            <div className="text-center pt-6 space-y-1">
-              <span className="text-xs font-mono font-bold text-accent-primary">01</span>
+            {/* Clean Label Below (No background box) */}
+            <div className="text-center pt-5 space-y-1">
+              <span className="text-xs font-mono font-bold text-accent-primary block">01</span>
               <h3 className="text-lg font-bold text-text-primary">Capture</h3>
               <p className="text-xs text-text-secondary">Seamless mobile data entry & client forms.</p>
             </div>
           </motion.div>
 
-          {/* FRAME 02: MANAGE (CENTER HIGHLIGHT - SCROLL LIFTED) */}
+          {/* FRAME 02: MANAGE (CENTER HIGHLIGHT) */}
           <motion.div
-            style={{ y: frame2Y, scale: frame2Scale, opacity: frame2Opacity }}
-            whileHover={{ y: -10, scale: 1.04 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ y: -6 }}
             onClick={() => setActiveFrame(2)}
-            className={`cursor-pointer transition-all duration-300 ${
-              activeFrame === 2 ? 'ring-4 ring-accent-primary rounded-[42px] shadow-[0_30px_60px_rgba(79,70,229,0.3)]' : 'opacity-95 hover:opacity-100'
-            }`}
+            className="cursor-pointer group"
           >
-            <div className="w-full max-w-[280px] mx-auto h-[560px] rounded-[40px] bg-[#ffffff] border-[7px] border-accent-primary shadow-2xl p-4 flex flex-col justify-between relative overflow-hidden">
+            <div className={`w-full max-w-[280px] mx-auto h-[560px] rounded-[40px] bg-white border-[7px] border-[#1c1917] p-4 flex flex-col justify-between relative overflow-hidden transition-all duration-300 ${
+              activeFrame === 2 
+                ? 'shadow-[0_25px_60px_rgba(79,70,229,0.22)] scale-[1.03]' 
+                : 'shadow-2xl opacity-90 group-hover:opacity-100'
+            }`}>
               {/* Dynamic Island Notch */}
-              <div className="w-24 h-4 bg-[#292524] rounded-full mx-auto mb-3 shrink-0 flex items-center justify-center">
+              <div className="w-24 h-4 bg-[#1c1917] rounded-full mx-auto mb-3 shrink-0 flex items-center justify-center">
                 <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
               </div>
               
@@ -195,29 +171,34 @@ export const SeeItInActionMobileShowcase: React.FC = () => {
               </div>
 
               {/* Bottom Home Indicator */}
-              <div className="h-1 bg-[#292524]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
+              <div className="h-1 bg-[#1c1917]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
             </div>
 
-            {/* Label Below */}
-            <div className="text-center pt-6 space-y-1">
-              <span className="text-xs font-mono font-bold text-accent-primary">02</span>
+            {/* Clean Label Below (No background box) */}
+            <div className="text-center pt-5 space-y-1">
+              <span className="text-xs font-mono font-bold text-accent-primary block">02</span>
               <h3 className="text-lg font-bold text-text-primary">Manage</h3>
               <p className="text-xs text-text-secondary">Automated workflow tracking & status alerts.</p>
             </div>
           </motion.div>
 
-          {/* FRAME 03: INSIGHTS (SCROLL PROGRESSIVE BAR CHART) */}
+          {/* FRAME 03: INSIGHTS */}
           <motion.div
-            style={{ y: frame3Y, opacity: frame3Opacity }}
-            whileHover={{ y: -10, scale: 1.02 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ y: -6 }}
             onClick={() => setActiveFrame(3)}
-            className={`cursor-pointer transition-all duration-300 ${
-              activeFrame === 3 ? 'ring-2 ring-accent-primary rounded-[42px] shadow-[0_25px_50px_rgba(79,70,229,0.2)]' : 'opacity-95 hover:opacity-100'
-            }`}
+            className="cursor-pointer group"
           >
-            <div className="w-full max-w-[280px] mx-auto h-[540px] rounded-[40px] bg-[#ffffff] border-[7px] border-[#292524] shadow-xl p-4 flex flex-col justify-between relative overflow-hidden">
+            <div className={`w-full max-w-[280px] mx-auto h-[540px] rounded-[40px] bg-white border-[7px] border-[#1c1917] p-4 flex flex-col justify-between relative overflow-hidden transition-all duration-300 ${
+              activeFrame === 3 
+                ? 'shadow-[0_20px_50px_rgba(79,70,229,0.18)] scale-[1.02]' 
+                : 'shadow-xl opacity-90 group-hover:opacity-100'
+            }`}>
               {/* Dynamic Island Notch */}
-              <div className="w-24 h-4 bg-[#292524] rounded-full mx-auto mb-3 shrink-0" />
+              <div className="w-24 h-4 bg-[#1c1917] rounded-full mx-auto mb-3 shrink-0" />
               
               {/* Screen Content: Insights */}
               <div className="flex-1 space-y-4 pt-1">
@@ -238,13 +219,13 @@ export const SeeItInActionMobileShowcase: React.FC = () => {
                       <TrendingUp className="w-3 h-3" /> +28%
                     </span>
                   </div>
-                  {/* Scroll-Driven Bar Chart Growth */}
+                  {/* Performance Bar Chart */}
                   <div className="h-16 flex items-end justify-between gap-1.5 pt-2">
-                    <motion.div style={{ height: chartHeight }} className="w-full bg-accent-primary/30 rounded-t" />
-                    <motion.div style={{ height: chartHeight }} className="w-full bg-accent-primary/50 rounded-t" />
-                    <motion.div style={{ height: chartHeight }} className="w-full bg-accent-primary rounded-t" />
-                    <motion.div style={{ height: chartHeight }} className="w-full bg-accent-primary/80 rounded-t" />
-                    <motion.div style={{ height: chartHeight }} className="w-full bg-accent-primary rounded-t" />
+                    <div className="w-full bg-accent-primary/30 h-1/2 rounded-t" />
+                    <div className="w-full bg-accent-primary/50 h-2/3 rounded-t" />
+                    <div className="w-full bg-accent-primary h-full rounded-t" />
+                    <div className="w-full bg-accent-primary/80 h-4/5 rounded-t" />
+                    <div className="w-full bg-accent-primary h-full rounded-t" />
                   </div>
                 </div>
 
@@ -255,12 +236,12 @@ export const SeeItInActionMobileShowcase: React.FC = () => {
               </div>
 
               {/* Bottom Home Indicator */}
-              <div className="h-1 bg-[#292524]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
+              <div className="h-1 bg-[#1c1917]/30 rounded-full w-20 mx-auto mt-2 shrink-0" />
             </div>
 
-            {/* Label Below */}
-            <div className="text-center pt-6 space-y-1">
-              <span className="text-xs font-mono font-bold text-accent-primary">03</span>
+            {/* Clean Label Below (No background box) */}
+            <div className="text-center pt-5 space-y-1">
+              <span className="text-xs font-mono font-bold text-accent-primary block">03</span>
               <h3 className="text-lg font-bold text-text-primary">Insights</h3>
               <p className="text-xs text-text-secondary">Real-time business performance & analytics.</p>
             </div>

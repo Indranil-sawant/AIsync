@@ -7,35 +7,35 @@ import { motion } from 'framer-motion';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-[88vh] pt-36 pb-20 flex items-center overflow-hidden bg-bg-primary">
+    <section className="relative min-h-[85vh] pt-32 sm:pt-36 pb-16 sm:pb-20 flex items-center overflow-hidden bg-bg-primary">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-accent-primary/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-accent-primary/5 rounded-full blur-[160px] pointer-events-none" />
       
       {/* Subtle Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.025)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.025)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
           
           {/* Eyebrow Badge */}
           <motion.div 
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-border-medium shadow-sm hover:border-accent-primary/40 transition-colors"
+            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-border-medium shadow-sm hover:border-accent-primary/40 transition-colors"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-accent-primary animate-pulse" />
-            <span className="text-xs sm:text-sm font-mono tracking-wide text-text-primary uppercase font-bold">
+            <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse shrink-0" />
+            <span className="text-[11px] sm:text-sm font-mono tracking-wide text-text-primary uppercase font-bold">
               Software & Digital Solutions
             </span>
           </motion.div>
 
-          {/* Primary Centered Headline - Solid 100% High Contrast */}
+          {/* Primary Centered Headline - Clean Mobile Scale */}
           <motion.h1 
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-text-primary leading-[1.08] max-w-4xl mx-auto"
+            className="text-3xl sm:text-6xl lg:text-7xl font-black tracking-tight text-text-primary leading-[1.15] sm:leading-[1.08] max-w-4xl mx-auto"
           >
             Software and digital systems built for the way{' '}
             <span className="text-accent-primary">
@@ -48,22 +48,22 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-xl text-text-secondary max-w-3xl mx-auto font-normal leading-relaxed"
+            className="text-sm sm:text-xl text-text-secondary max-w-3xl mx-auto font-normal leading-relaxed px-2 sm:px-0"
           >
             We design and build custom websites, applications, automated workflows, and digital systems that help your business operate smoothly and grow.
           </motion.p>
 
-          {/* Centered Action CTAs */}
+          {/* Centered Action CTAs - Full Width on Mobile */}
           <motion.div 
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 pt-2 max-w-md sm:max-w-none mx-auto"
           >
-            <Button to="/contact" variant="primary" size="lg" icon={<ArrowRight className="w-5 h-5" />}>
+            <Button to="/contact" variant="primary" size="lg" className="w-full sm:w-auto min-h-[48px]" icon={<ArrowRight className="w-5 h-5" />}>
               Start a Conversation
             </Button>
-            <Button to="/services" variant="secondary" size="lg" icon={<Layers className="w-5 h-5" />}>
+            <Button to="/services" variant="secondary" size="lg" className="w-full sm:w-auto min-h-[48px]" icon={<Layers className="w-5 h-5" />}>
               Explore Our Services
             </Button>
           </motion.div>
@@ -73,7 +73,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="pt-4 max-w-3xl mx-auto"
+            className="pt-2 sm:pt-4 max-w-3xl mx-auto"
           >
             <SystemConnectedDiagram />
           </motion.div>
@@ -83,7 +83,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-border-subtle max-w-3xl mx-auto"
+            className="pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 border-t border-border-subtle max-w-3xl mx-auto"
           >
             <div className="flex items-center justify-center gap-2.5 p-3 rounded-xl bg-white border border-border-subtle shadow-sm hover-card-effect">
               <ShieldCheck className="w-4 h-4 text-accent-primary shrink-0" />

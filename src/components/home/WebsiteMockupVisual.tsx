@@ -39,11 +39,11 @@ export const WebsiteMockupVisual: React.FC = () => {
           )}
         </div>
 
-        {/* Refined Device Switcher Controls */}
-        <div className="flex items-center gap-1 bg-bg-surface1 p-1 rounded-xl border border-border-medium shadow-sm">
+        {/* Refined Device Switcher Controls (44px Minimum Touch Area) */}
+        <div className="flex items-center gap-1 bg-white p-1 rounded-xl border border-border-medium shadow-sm">
           <button
             onClick={() => handleDeviceChange('desktop')}
-            className={`group px-3 py-1.5 rounded-lg text-xs font-mono flex items-center gap-1.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 ${
+            className={`group px-3 py-2 rounded-lg text-xs font-mono flex items-center gap-1.5 min-h-[44px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 select-none ${
               device === 'desktop'
                 ? 'bg-accent-primary text-white shadow-sm font-bold'
                 : 'text-text-secondary hover:text-text-primary hover:bg-bg-surface2'
@@ -51,13 +51,13 @@ export const WebsiteMockupVisual: React.FC = () => {
             title="Desktop View (Full Screen Layout)"
             aria-label="Switch to Desktop View"
           >
-            <Monitor className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+            <Monitor className="w-4 h-4 transition-transform group-hover:scale-110" />
             <span className="hidden md:inline">Desktop</span>
           </button>
 
           <button
             onClick={() => handleDeviceChange('tablet')}
-            className={`group px-3 py-1.5 rounded-lg text-xs font-mono flex items-center gap-1.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 ${
+            className={`group px-3 py-2 rounded-lg text-xs font-mono flex items-center gap-1.5 min-h-[44px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 select-none ${
               device === 'tablet'
                 ? 'bg-accent-primary text-white shadow-sm font-bold'
                 : 'text-text-secondary hover:text-text-primary hover:bg-bg-surface2'
@@ -65,13 +65,13 @@ export const WebsiteMockupVisual: React.FC = () => {
             title="Tablet View (Responsive Medium Canvas)"
             aria-label="Switch to Tablet View"
           >
-            <Tablet className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+            <Tablet className="w-4 h-4 transition-transform group-hover:scale-110" />
             <span className="hidden md:inline">Tablet</span>
           </button>
 
           <button
             onClick={() => handleDeviceChange('mobile')}
-            className={`group px-3 py-1.5 rounded-lg text-xs font-mono flex items-center gap-1.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 ${
+            className={`group px-3 py-2 rounded-lg text-xs font-mono flex items-center gap-1.5 min-h-[44px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary/50 select-none ${
               device === 'mobile'
                 ? 'bg-accent-primary text-white shadow-sm font-bold'
                 : 'text-text-secondary hover:text-text-primary hover:bg-bg-surface2'
@@ -79,7 +79,7 @@ export const WebsiteMockupVisual: React.FC = () => {
             title="Mobile View (Compact Mobile Viewport)"
             aria-label="Switch to Mobile View"
           >
-            <Smartphone className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
+            <Smartphone className="w-4 h-4 transition-transform group-hover:scale-110" />
             <span className="hidden md:inline">Mobile</span>
           </button>
         </div>
@@ -104,7 +104,7 @@ export const WebsiteMockupVisual: React.FC = () => {
           </div>
 
           {/* Website Canvas Interface */}
-          <div className="p-6 space-y-5 bg-white">
+          <div className="p-5 sm:p-6 space-y-5 bg-white">
             {/* Mock Header */}
             <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
               <div className="font-mono text-xs font-bold text-text-primary">YOUR BRAND</div>
@@ -135,7 +135,7 @@ export const WebsiteMockupVisual: React.FC = () => {
               <span className="text-[10px] font-mono text-text-secondary font-medium">Ready to work together?</span>
               <button 
                 onClick={() => handleStepChange(3)}
-                className="text-[10px] font-mono px-3 py-1 rounded-lg bg-accent-primary text-white font-semibold shadow-sm hover:bg-accent-hover transition-colors"
+                className="text-[10px] font-mono px-3 py-1.5 rounded-lg bg-accent-primary text-white font-semibold shadow-sm hover:bg-accent-hover active:scale-95 transition-all select-none"
               >
                 Submit Inquiry →
               </button>
@@ -146,10 +146,10 @@ export const WebsiteMockupVisual: React.FC = () => {
       </div>
 
       {/* Customer Journey Flow: Discover -> Understand -> Enquire */}
-      <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-border-subtle">
+      <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3.5 border-t border-border-subtle">
         <div
           onClick={() => handleStepChange(1)}
-          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer hover:-translate-y-0.5 ${
+          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer min-h-[44px] select-none ${
             activeStep === 1 
               ? 'bg-white border-accent-primary shadow-md ring-1 ring-accent-primary/30' 
               : 'bg-white border-border-subtle hover:border-border-medium'
@@ -165,7 +165,7 @@ export const WebsiteMockupVisual: React.FC = () => {
 
         <div
           onClick={() => handleStepChange(2)}
-          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer hover:-translate-y-0.5 ${
+          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer min-h-[44px] select-none ${
             activeStep === 2 
               ? 'bg-white border-accent-primary shadow-md ring-1 ring-accent-primary/30' 
               : 'bg-white border-border-subtle hover:border-border-medium'
@@ -181,7 +181,7 @@ export const WebsiteMockupVisual: React.FC = () => {
 
         <div
           onClick={() => handleStepChange(3)}
-          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer hover:-translate-y-0.5 ${
+          className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer min-h-[44px] select-none ${
             activeStep === 3 
               ? 'bg-white border-accent-primary shadow-md ring-1 ring-accent-primary/30' 
               : 'bg-white border-border-subtle hover:border-border-medium'
