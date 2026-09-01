@@ -14,6 +14,7 @@ import {
   Sparkles,
   AlertCircle,
   ShieldCheck
+} from 'lucide-react';
 import { LEAD_CONFIG } from '../../config/leadConfig';
 import { trackEvent } from '../../utils/analytics';
 
