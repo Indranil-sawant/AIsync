@@ -47,7 +47,7 @@ export const CaseStudyGrid: React.FC = () => {
           </a>
         </div>
 
-        {/* Viewport View Switcher Tabs (Storefront | Operational Dashboard | Orders Analytics) */}
+        {/* Viewport View Switcher Tabs */}
         <div className="space-y-4">
           <div className="flex items-center justify-between flex-wrap gap-3 pb-2 border-b border-border-subtle">
             <span className="text-xs font-mono font-bold text-text-primary uppercase tracking-wider">
@@ -130,7 +130,6 @@ export const CaseStudyGrid: React.FC = () => {
           </div>
         </div>
 
-        {/* Footer Capabilities */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
           <div className="p-4 rounded-xl bg-[#fbf9f5] border border-border-subtle space-y-1">
             <span className="text-[10px] font-mono uppercase text-accent-primary font-bold block">Capabilities Built</span>
@@ -352,77 +351,140 @@ export const CaseStudyGrid: React.FC = () => {
       </motion.div>
 
       {/* ==================================================================== */}
-      {/* CHAPTER 05 & 06 — PHOENIX & ARISE */}
+      {/* CHAPTER 05 — PHOENIX TECHNICAL SOLUTIONS (WITH REAL SCREENSHOT) */}
       {/* ==================================================================== */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        {/* PHOENIX TECHNICAL SOLUTIONS */}
-        <motion.div 
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="p-6 rounded-2xl bg-white border border-border-medium shadow-sm hover-card-effect space-y-5 flex flex-col justify-between"
-        >
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
+      <motion.div 
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="p-6 sm:p-8 rounded-2xl bg-white border border-border-medium shadow-sm hover-card-effect space-y-6 overflow-hidden"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            <div className="rounded-xl bg-[#1c1917] border border-border-medium overflow-hidden shadow-lg group">
+              <div className="px-3 py-2 bg-[#292524] border-b border-white/10 flex items-center justify-between text-[10px] font-mono">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                </div>
+                <div className="px-3 py-0.5 rounded bg-black/40 text-stone-300 border border-white/10 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  https://www.phoenixtechincalsolutions.com/
+                </div>
+              </div>
+
+              <div className="relative overflow-hidden max-h-[300px] sm:max-h-[340px]">
+                <img 
+                  src="/images/phoenix-screenshot.png" 
+                  alt="Phoenix Technical Solutions Official Website Screenshot" 
+                  className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 space-y-4 order-1 lg:order-2">
+            <div className="flex items-center gap-2.5 flex-wrap">
               <span className="font-mono text-2xl font-black text-accent-primary">05</span>
-              <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-[#f5f3ef] text-text-tertiary font-bold">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-text-tertiary px-2.5 py-0.5 rounded bg-[#f5f3ef] border border-border-subtle font-bold">
                 Piping & SCADA Automation
               </span>
-            </div>
-            <h4 className="text-xl font-extrabold text-text-primary leading-snug">
-              Phoenix Technical Solutions
-            </h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              Technical business website for Swagelok-certified engineers delivering high-pressure reactor systems, industrial piping, and SCADA automation.
-            </p>
-          </div>
-
-          <a
-            href="https://www.phoenixtechincalsolutions.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold text-accent-primary hover:text-accent-hover transition-colors pt-3 border-t border-border-subtle"
-          >
-            Visit Live Site (phoenixtechincalsolutions.com) <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </motion.div>
-
-        {/* ARISE MACHINE TOOLS */}
-        <motion.div 
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="p-6 rounded-2xl bg-white border border-border-medium shadow-sm hover-card-effect space-y-5 flex flex-col justify-between"
-        >
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-2xl font-black text-accent-primary">06</span>
-              <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded bg-[#f5f3ef] text-text-tertiary font-bold">
-                Machinery & CNC Tooling
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center gap-1">
+                <Globe className="w-3 h-3" /> Live Site
               </span>
             </div>
-            <h4 className="text-xl font-extrabold text-text-primary leading-snug">
-              Arise Machine Tools Solution
-            </h4>
-            <p className="text-xs text-text-secondary leading-relaxed">
-              SEO-optimized digital product catalog for authorized distributor of precision CNC cutting tools, tool holding systems, and industrial machining.
+
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-text-primary leading-tight">
+              Phoenix Technical — Process Piping & Automation
+            </h3>
+
+            <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+              Technical business website for Swagelok-certified engineers delivering high-pressure reactor systems, industrial piping, and SCADA automation.
             </p>
+
+            <div className="pt-1">
+              <a
+                href="https://www.phoenixtechincalsolutions.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-accent-primary text-white font-bold text-xs hover:bg-accent-hover transition-all shadow-sm"
+              >
+                Explore Live Site (phoenixtechincalsolutions.com) <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ==================================================================== */}
+      {/* CHAPTER 06 — ARISE MACHINE TOOLS SOLUTIONS (WITH REAL SCREENSHOT) */}
+      {/* ==================================================================== */}
+      <motion.div 
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="p-6 sm:p-8 rounded-2xl bg-white border border-border-medium shadow-sm hover-card-effect space-y-6 overflow-hidden"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-5 space-y-4">
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <span className="font-mono text-2xl font-black text-accent-primary">06</span>
+              <span className="text-[11px] font-mono uppercase tracking-widest text-text-tertiary px-2.5 py-0.5 rounded bg-[#f5f3ef] border border-border-subtle font-bold">
+                Machinery & CNC Tooling
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center gap-1">
+                <Globe className="w-3 h-3" /> Live Site
+              </span>
+            </div>
+
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-text-primary leading-tight">
+              Arise Machine Tools — Precision CNC Catalog
+            </h3>
+
+            <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
+              SEO-optimized digital product catalog for an authorized distributor of precision CNC cutting tools, tool holding systems, and industrial machining solutions.
+            </p>
+
+            <div className="pt-1">
+              <a
+                href="https://arisemachinetools.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-accent-primary text-white font-bold text-xs hover:bg-accent-hover transition-all shadow-sm"
+              >
+                Explore Live Site (arisemachinetools.com) <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
 
-          <a
-            href="https://arisemachinetools.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs font-bold text-accent-primary hover:text-accent-hover transition-colors pt-3 border-t border-border-subtle"
-          >
-            Visit Live Site (arisemachinetools.com) <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </motion.div>
+          <div className="lg:col-span-7">
+            <div className="rounded-xl bg-[#1c1917] border border-border-medium overflow-hidden shadow-lg group">
+              <div className="px-3 py-2 bg-[#292524] border-b border-white/10 flex items-center justify-between text-[10px] font-mono">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                </div>
+                <div className="px-3 py-0.5 rounded bg-black/40 text-stone-300 border border-white/10 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  https://arisemachinetools.com/
+                </div>
+              </div>
 
-      </div>
+              <div className="relative overflow-hidden max-h-[300px] sm:max-h-[340px]">
+                <img 
+                  src="/images/arise-screenshot.png" 
+                  alt="Arise Machine Tools Official Website Screenshot" 
+                  className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
 
     </div>
   );
