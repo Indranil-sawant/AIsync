@@ -3,7 +3,6 @@ import { Container } from '../common/Container';
 import { Button } from '../ui/Button';
 import { SystemConnectedDiagram } from './SystemConnectedDiagram';
 import { ArrowRight, ShieldCheck, Zap, Layers, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -18,73 +17,43 @@ export const HeroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
           
           {/* Eyebrow Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-border-medium shadow-sm hover:border-accent-primary/40 transition-colors"
-          >
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-border-medium shadow-sm hover:border-accent-primary/40 transition-colors">
             <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse shrink-0" />
             <span className="text-[11px] sm:text-sm font-mono tracking-wide text-text-primary uppercase font-bold">
               Software & Digital Solutions
             </span>
-          </motion.div>
+          </div>
 
           {/* Primary Centered Headline - Clean Mobile Scale */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-6xl lg:text-7xl font-black tracking-tight text-text-primary leading-[1.15] sm:leading-[1.08] max-w-4xl mx-auto"
-          >
+          <h1 className="text-3xl sm:text-6xl lg:text-7xl font-black tracking-tight text-text-primary leading-[1.15] sm:leading-[1.08] max-w-4xl mx-auto">
             Software and digital systems built for the way{' '}
             <span className="text-accent-primary">
               your business works.
             </span>
-          </motion.h1>
+          </h1>
 
           {/* Centered Subtitle Description */}
-          <motion.p 
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-xl text-text-secondary max-w-3xl mx-auto font-normal leading-relaxed px-2 sm:px-0"
-          >
+          <p className="text-sm sm:text-xl text-text-secondary max-w-3xl mx-auto font-normal leading-relaxed px-2 sm:px-0">
             We design and build custom websites, applications, automated workflows, and digital systems that help your business operate smoothly and grow.
-          </motion.p>
+          </p>
 
           {/* Centered Action CTAs - Full Width on Mobile */}
-          <motion.div 
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 pt-2 max-w-md sm:max-w-none mx-auto"
-          >
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 pt-2 max-w-md sm:max-w-none mx-auto">
             <Button to="/contact" variant="primary" size="lg" className="w-full sm:w-auto min-h-[48px]" icon={<ArrowRight className="w-5 h-5" />}>
               Start a Conversation
             </Button>
             <Button to="/services" variant="secondary" size="lg" className="w-full sm:w-auto min-h-[48px]" icon={<Layers className="w-5 h-5" />}>
               Explore Our Services
             </Button>
-          </motion.div>
+          </div>
 
           {/* Centered Interactive Architecture Visualization */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="pt-2 sm:pt-4 max-w-3xl mx-auto"
-          >
+          <div className="pt-2 sm:pt-4 max-w-3xl mx-auto">
             <SystemConnectedDiagram />
-          </motion.div>
+          </div>
 
           {/* Centered Trust Signals */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 border-t border-border-subtle max-w-3xl mx-auto"
-          >
+          <div className="pt-6 sm:pt-8 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 border-t border-border-subtle max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-2.5 p-3 rounded-xl bg-white border border-border-subtle shadow-sm hover-card-effect">
               <ShieldCheck className="w-4 h-4 text-accent-primary shrink-0" />
               <span className="text-xs font-semibold text-text-primary">Plain-English Advice</span>
@@ -97,7 +66,7 @@ export const HeroSection: React.FC = () => {
               <CheckCircle2 className="w-4 h-4 text-accent-primary shrink-0" />
               <span className="text-xs font-semibold text-text-primary">Fixed Upfront Quotes</span>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </Container>

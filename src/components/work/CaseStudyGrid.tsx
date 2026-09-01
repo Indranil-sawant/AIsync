@@ -109,6 +109,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/bhavani-storefront.png" 
                   alt="Bhavani Cashews Storefront Catalog Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               )}
@@ -116,6 +120,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/bhavani-dashboard.png" 
                   alt="Bhavani Cashews Admin Operations Dashboard Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               )}
@@ -123,6 +131,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/bhavani-orders-blurred.png" 
                   alt="Bhavani Cashews Orders Management Screenshot (Customer Names Anonymized)" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               )}
@@ -206,6 +218,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/aorr-screenshot.png" 
                   alt="AORR Official Website Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
@@ -243,6 +259,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/hawksbill-screenshot.png" 
                   alt="Hawksbill Technik Official Website Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
@@ -342,6 +362,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/globus-screenshot.png" 
                   alt="Globus Travel Services Official Website Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
@@ -379,6 +403,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/phoenix-screenshot.png" 
                   alt="Phoenix Technical Solutions Official Website Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>
@@ -478,6 +506,10 @@ export const CaseStudyGrid: React.FC = () => {
                 <img 
                   src="/images/arise-screenshot.png" 
                   alt="Arise Machine Tools Official Website Screenshot" 
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
                   className="w-full object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
                 />
               </div>

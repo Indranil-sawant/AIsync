@@ -19,7 +19,7 @@ export const BusinessFaq: React.FC = () => {
     },
     {
       q: 'Can you automate our existing manual spreadsheets and emails?',
-      a: 'Absoluted. In most cases, we connect the software tools you already use so information flows automatically without your team needing to copy data manually.'
+      a: 'Absolutely. In most cases, we connect the software tools you already use so information flows automatically without your team needing to copy data manually.'
     },
     {
       q: 'Can you work with or upgrade our existing website?',
@@ -42,7 +42,7 @@ export const BusinessFaq: React.FC = () => {
           >
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-semibold text-text-primary hover:text-white transition-colors"
+              className="w-full p-5 text-left flex items-center justify-between text-sm sm:text-base font-semibold text-text-primary hover:text-accent-primary transition-colors"
             >
               <span className="flex items-center gap-3 pr-4">
                 <HelpCircle className="w-4 h-4 text-accent-primary shrink-0" />

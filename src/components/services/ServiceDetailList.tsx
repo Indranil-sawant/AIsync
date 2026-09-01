@@ -150,7 +150,7 @@ export const ServiceDetailList: React.FC<ServiceDetailListProps> = ({ activeCate
                   <div key={faqKey} className="rounded-lg bg-bg-primary border border-border-subtle overflow-hidden">
                     <button
                       onClick={() => toggleFaq(faqKey)}
-                      className="w-full px-5 py-3 text-left flex items-center justify-between text-xs font-semibold text-text-primary hover:text-white"
+                      className="w-full px-5 py-3 text-left flex items-center justify-between text-xs font-semibold text-text-primary hover:text-accent-primary transition-colors"
                     >
                       <span className="flex items-center gap-2">
                         <HelpCircle className="w-4 h-4 text-accent-primary" />

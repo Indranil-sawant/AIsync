@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-1 text-sm font-medium text-accent-primary hover:text-white transition-colors"
+              className="inline-flex items-center gap-1 text-sm font-medium text-accent-primary hover:text-accent-hover transition-colors"
             >
               Start a Conversation <ArrowUpRight className="w-4 h-4" />
             </Link>

@@ -48,7 +48,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         question: 'Can I update the content myself later?',
-        answer: 'Absoluted. We set up easy-to-use content tools so you can update text, images, and services whenever you need to.'
+        answer: 'Absolutely. We set up easy-to-use content tools so you can update text, images, and services whenever you need to.'
       }
     ]
   },
