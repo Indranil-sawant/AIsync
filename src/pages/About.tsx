@@ -2,8 +2,15 @@ import React from 'react';
 import { Container } from '../components/common/Container';
 import { PhilosophySection } from '../components/about/PhilosophySection';
 import { EngineeringValues } from '../components/about/EngineeringValues';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 export const About: React.FC = () => {
+  usePageSEO({
+    title: 'About AIsync Software Solutions — Engineering Leadership in Ratnagiri',
+    description: 'Founded by Indranil Amar Sawant in Ratnagiri, Maharashtra, AIsync delivers high-performance digital architectures, reliable software systems, and plain-English technology guidance.',
+    canonicalPath: '/about',
+  });
+
   return (
     <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
       <Container className="space-y-16">

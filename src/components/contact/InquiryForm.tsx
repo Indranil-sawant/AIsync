@@ -14,8 +14,8 @@ import {
   Sparkles,
   AlertCircle,
   ShieldCheck
-} from 'lucide-react';
 import { LEAD_CONFIG } from '../../config/leadConfig';
+import { trackEvent } from '../../utils/analytics';
 
 export const InquiryForm: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -123,6 +123,7 @@ export const InquiryForm: React.FC = () => {
       }
 
       setStatus('SUCCESS');
+      trackEvent('lead_form_submitted', { service_scope: selectedService });
       scrollToFormTop();
 
     } catch (err) {
@@ -130,6 +131,7 @@ export const InquiryForm: React.FC = () => {
       // Fallback graceful success to protect user experience if endpoint is unreachable during dev
       setLeadId(generateFallbackId());
       setStatus('SUCCESS');
+      trackEvent('lead_form_submitted', { service_scope: selectedService });
       scrollToFormTop();
     }
   };

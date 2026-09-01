@@ -2,9 +2,16 @@ import React from 'react';
 import { Container } from '../components/common/Container';
 import { CaseStudyGrid } from '../components/work/CaseStudyGrid';
 import { Button } from '../components/ui/Button';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export const Work: React.FC = () => {
+  usePageSEO({
+    title: 'Client Case Studies & Verified Engineering Portfolio — AIsync Ratnagiri',
+    description: 'Real-world software systems, e-commerce storefronts, export lead engines, and industrial web applications designed and built by AIsync in Ratnagiri, Maharashtra.',
+    canonicalPath: '/work',
+  });
+
   return (
     <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
       <Container className="space-y-16">

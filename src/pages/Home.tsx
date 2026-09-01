@@ -8,6 +8,7 @@ import { ProcessTimeline } from '../components/home/ProcessTimeline';
 import { BusinessFaq } from '../components/home/BusinessFaq';
 import { CaseStudyGrid } from '../components/work/CaseStudyGrid';
 import { PhilosophySection } from '../components/about/PhilosophySection';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -16,6 +17,12 @@ import {
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
+  usePageSEO({
+    title: 'AIsync Software Solutions — Software & Website Development Company in Ratnagiri',
+    description: 'AIsync Software Solutions is the premier software development & website design company in Ratnagiri, Maharashtra. Founded by Indranil Amar Sawant, delivering custom web apps, e-commerce, and business automation.',
+    canonicalPath: '/',
+  });
+
   return (
     <div className="space-y-0 bg-bg-primary text-text-primary">
       

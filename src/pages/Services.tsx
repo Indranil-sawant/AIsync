@@ -3,9 +3,16 @@ import { Container } from '../components/common/Container';
 import { CapabilitiesFilter } from '../components/services/CapabilitiesFilter';
 import { ServiceDetailList } from '../components/services/ServiceDetailList';
 import { Button } from '../components/ui/Button';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { ArrowRight, MessageSquare } from 'lucide-react';
 
 export const Services: React.FC = () => {
+  usePageSEO({
+    title: 'Software Development & Automation Services in Ratnagiri — AIsync',
+    description: 'Explore custom website development, mobile & web applications, business process automation, digital records, and technology consulting engineered in Ratnagiri by AIsync.',
+    canonicalPath: '/services',
+  });
+
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = [

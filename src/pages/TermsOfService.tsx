@@ -1,9 +1,16 @@
 import React from 'react';
 import { Container } from '../components/common/Container';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { ShieldCheck, FileCheck, Code2, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const TermsOfService: React.FC = () => {
+  usePageSEO({
+    title: 'Terms of Service & Project Governance — AIsync Software Solutions',
+    description: 'Commercial terms of service, intellectual property assignments, client warranties, and project execution policies of AIsync Software Solutions.',
+    canonicalPath: '/terms',
+  });
+
   return (
     <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
       <Container>

@@ -1,9 +1,16 @@
 import React from 'react';
 import { Container } from '../components/common/Container';
 import { InquiryForm } from '../components/contact/InquiryForm';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { Mail, Clock, ShieldCheck, PhoneCall, MapPin } from 'lucide-react';
 
 export const Contact: React.FC = () => {
+  usePageSEO({
+    title: 'Contact AIsync Software Solutions — Ratnagiri Software Consultation',
+    description: 'Initiate a technical project brief or consultation. Connect directly with founder Indranil Amar Sawant in Ratnagiri, Maharashtra for custom software, websites, and business systems.',
+    canonicalPath: '/contact',
+  });
+
   return (
     <div className="pt-28 pb-16 bg-bg-primary min-h-screen">
       <Container>

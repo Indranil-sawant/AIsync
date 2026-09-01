@@ -1,0 +1,17 @@
+{
+  "name": "AIsync Software Solutions",
+  "short_name": "AIsync",
+  "description": "Software & Website Development Company in Ratnagiri, Maharashtra",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfbf9",
+  "theme_color": "#fcfbf9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

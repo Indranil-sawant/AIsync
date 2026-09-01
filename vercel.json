@@ -28,7 +28,16 @@
       ]
     },
     {
-      "source": "/(images|favicon.svg)(.*)",
+      "source": "/(robots\\.txt|sitemap\\.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(images|favicon\\.svg|site\\.webmanifest)(.*)",
       "headers": [
         {
           "key": "Cache-Control",

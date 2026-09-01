@@ -4,6 +4,7 @@ import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
 import { MouseSpotlight } from './components/common/MouseSpotlight';
 import { Home } from './pages/Home';
+import { initGA, trackPageView } from './utils/analytics';
 
 // Lazy-loaded secondary routes for optimal initial chunk size
 const Services = lazy(() => import('./pages/Services').then(m => ({ default: m.Services })));
@@ -14,13 +15,18 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ de
 const TermsOfService = lazy(() => import('./pages/TermsOfService').then(m => ({ default: m.TermsOfService })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
-// Scroll to top helper on route change
-const ScrollToTop: React.FC = () => {
-  const { pathname } = useLocation();
+// Scroll to top and Analytics route tracking helper
+const RouteListener: React.FC = () => {
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    trackPageView(pathname + search);
+  }, [pathname, search]);
 
   return null;
 };
@@ -35,7 +41,7 @@ const RouteFallback: React.FC = () => (
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+      <RouteListener />
       <MouseSpotlight />
       <div className="flex flex-col min-h-screen bg-bg-primary text-text-primary">
         <Header />

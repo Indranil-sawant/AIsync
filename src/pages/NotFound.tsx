@@ -1,9 +1,17 @@
 import React from 'react';
 import { Container } from '../components/common/Container';
 import { Button } from '../components/ui/Button';
+import { usePageSEO } from '../hooks/usePageSEO';
 import { Terminal, Home } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
+  usePageSEO({
+    title: '404: Page Not Found — AIsync Software Solutions',
+    description: 'The requested URL does not exist on AIsync Software Solutions.',
+    canonicalPath: '/404',
+    noIndex: true,
+  });
+
   return (
     <div className="pt-36 pb-24 bg-bg-primary min-h-[85vh] flex items-center justify-center">
       <Container>
