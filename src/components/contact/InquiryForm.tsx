@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '../ui/Button';
 import { 
   Send, 
@@ -18,6 +18,7 @@ import {
 import { LEAD_CONFIG } from '../../config/leadConfig';
 
 export const InquiryForm: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [step, setStep] = useState<1 | 2>(1);
   const [selectedService, setSelectedService] = useState<string>('Website Development');
 
@@ -32,6 +33,17 @@ export const InquiryForm: React.FC = () => {
   const [status, setStatus] = useState<'IDLE' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('IDLE');
   const [leadId, setLeadId] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
+
+  const scrollToFormTop = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleStepChange = (nextStep: 1 | 2) => {
+    setStep(nextStep);
+    scrollToFormTop();
+  };
 
   // Icon Resolver
   const getIcon = (iconName: string) => {
@@ -61,6 +73,7 @@ export const InquiryForm: React.FC = () => {
     if (formData.confirm_email_address) {
       setStatus('SUCCESS');
       setLeadId('AIS-PROTECTED');
+      scrollToFormTop();
       return;
     }
 
@@ -71,6 +84,7 @@ export const InquiryForm: React.FC = () => {
 
     setStatus('SUBMITTING');
     setErrorMessage('');
+    scrollToFormTop();
 
     const payload = {
       name: formData.name.trim(),
@@ -109,12 +123,14 @@ export const InquiryForm: React.FC = () => {
       }
 
       setStatus('SUCCESS');
+      scrollToFormTop();
 
     } catch (err) {
       console.error('Lead submission error:', err);
       // Fallback graceful success to protect user experience if endpoint is unreachable during dev
       setLeadId(generateFallbackId());
       setStatus('SUCCESS');
+      scrollToFormTop();
     }
   };
 
@@ -131,12 +147,13 @@ export const InquiryForm: React.FC = () => {
     });
     setLeadId('');
     setErrorMessage('');
+    scrollToFormTop();
   };
 
   // SUCCESS CONFIRMATION SCREEN
   if (status === 'SUCCESS') {
     return (
-      <div className="p-8 sm:p-12 rounded-3xl bg-white border border-border-medium text-center space-y-6 max-w-xl mx-auto shadow-md">
+      <div ref={containerRef} className="p-8 sm:p-12 rounded-3xl bg-white border border-border-medium text-center space-y-6 max-w-xl mx-auto shadow-md scroll-mt-32">
         <div className="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-8 h-8" />
         </div>
@@ -185,7 +202,7 @@ export const InquiryForm: React.FC = () => {
   }
 
   return (
-    <div className="p-6 sm:p-10 rounded-3xl bg-white border border-border-medium shadow-md space-y-8">
+    <div ref={containerRef} className="p-6 sm:p-10 rounded-3xl bg-white border border-border-medium shadow-md space-y-8 scroll-mt-32">
 
       {/* Progress Header */}
       <div className="flex items-center justify-between pb-6 border-b border-border-subtle">
@@ -248,7 +265,7 @@ export const InquiryForm: React.FC = () => {
               type="button"
               variant="primary"
               size="md"
-              onClick={() => setStep(2)}
+              onClick={() => handleStepChange(2)}
               icon={<ArrowRight className="w-4 h-4" />}
             >
               Continue to Brief →
@@ -268,7 +285,7 @@ export const InquiryForm: React.FC = () => {
             </span>
             <button
               type="button"
-              onClick={() => setStep(1)}
+              onClick={() => handleStepChange(1)}
               className="text-accent-primary hover:underline font-bold text-[11px]"
             >
               Change Service
@@ -364,7 +381,7 @@ export const InquiryForm: React.FC = () => {
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
             <button
               type="button"
-              onClick={() => setStep(1)}
+              onClick={() => handleStepChange(1)}
               className="inline-flex items-center gap-1.5 text-xs font-bold text-text-secondary hover:text-text-primary"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back to Services

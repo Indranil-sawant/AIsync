@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from './Container';
-import { Cpu, ArrowUpRight } from 'lucide-react';
+import { Cpu, ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,11 +21,22 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm text-text-secondary max-w-sm leading-relaxed">
-              We build websites, applications, automated workflows, and digital systems to help your business work better and grow.
+              Founded & operated by <strong className="text-text-primary">Indranil Amar Sawant</strong> in Ratnagiri, Maharashtra. We build websites, web applications, automated workflows, and digital systems.
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bg-surface2 border border-border-subtle text-xs font-mono text-text-secondary">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Operational Status: Ready for Inquiries
+            
+            <div className="space-y-1.5 pt-1 text-xs text-text-secondary font-mono">
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-accent-primary" />
+                <a href="tel:+919975046416" className="hover:text-text-primary transition-colors">+91 9975046416</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-accent-primary" />
+                <a href="mailto:indranilsawant07@gmail.com" className="hover:text-text-primary transition-colors">indranilsawant07@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-accent-primary" />
+                <span>Ratnagiri, Maharashtra, India</span>
+              </div>
             </div>
           </div>
 
@@ -49,6 +60,8 @@ export const Footer: React.FC = () => {
               <li><Link to="/about" className="hover:text-text-primary transition-colors">About Us</Link></li>
               <li><Link to="/work" className="hover:text-text-primary transition-colors">Case Studies</Link></li>
               <li><Link to="/contact" className="hover:text-text-primary transition-colors">Contact Us</Link></li>
+              <li><Link to="/privacy" className="hover:text-text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-text-primary transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -69,10 +82,10 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-text-tertiary gap-4">
-          <p>© {currentYear} Aisync Software Solutions. All rights reserved.</p>
+          <p>© {currentYear} Indranil Amar Sawant — AIsync Software Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <span className="hover:text-text-secondary transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-text-secondary transition-colors cursor-pointer">Terms of Service</span>
+            <Link to="/privacy" className="hover:text-text-secondary transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-text-secondary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </Container>
