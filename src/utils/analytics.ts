@@ -17,7 +17,7 @@ declare global {
 }
 
 // Measurement ID from environment or fallback placeholder
-const GA_MEASUREMENT_ID = (import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX').trim();
+const GA_MEASUREMENT_ID = (import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-JPXF6EHEG3').trim();
 
 // Check if a real, valid Measurement ID is configured
 const isRealMeasurementId = (id: string): boolean => {
@@ -32,6 +32,12 @@ let isInitialized = false;
  */
 export const initGA = (): void => {
   if (typeof window === 'undefined' || isInitialized) return;
+
+  // If already initialized via index.html tag, reuse it
+  if (typeof window.gtag === 'function') {
+    isInitialized = true;
+    return;
+  }
 
   if (!isRealMeasurementId(GA_MEASUREMENT_ID)) {
     // Analytics is unconfigured or in placeholder mode - silent no-op
