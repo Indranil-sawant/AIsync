@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # XML Sitemap Reference
-Sitemap: https://aisyncsoftware.in/sitemap.xml
+Sitemap: https://www.aisyncsoftware.in/sitemap.xml

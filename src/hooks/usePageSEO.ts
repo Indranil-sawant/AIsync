@@ -8,7 +8,7 @@ interface SEOProps {
   noIndex?: boolean;
 }
 
-const BASE_URL = 'https://aisyncsoftware.in';
+const BASE_URL = 'https://www.aisyncsoftware.in';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-image.png`;
 
 export const usePageSEO = ({
