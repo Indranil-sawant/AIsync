@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.aisyncsoftware.in"
-        }
-      ],
-      "destination": "https://aisyncsoftware.in/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/",
