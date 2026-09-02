@@ -18,8 +18,8 @@ import {
 
 export const Home: React.FC = () => {
   usePageSEO({
-    title: 'AiSync Software Solutions | Software & Website Development in Ratnagiri',
-    description: 'AiSync Software Solutions builds custom software, responsive websites, web applications, e-commerce platforms, and business automation in Ratnagiri, Maharashtra.',
+    title: 'AiSync Software Solutions | Software & Website Development',
+    description: 'AiSync Software Solutions delivers custom software, responsive websites, and business automation in Ratnagiri, Maharashtra. Start your project today.',
     canonicalPath: '/',
   });
 

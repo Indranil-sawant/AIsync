@@ -8,8 +8,8 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
 
 export const Services: React.FC = () => {
   usePageSEO({
-    title: 'Services | AiSync Software Solutions — Software & Web Development in Ratnagiri',
-    description: 'Explore custom software engineering, website development, mobile apps, business automation, and technology consulting in Ratnagiri by AiSync Software Solutions.',
+    title: 'Services | AiSync Software Solutions — Web & App Dev',
+    description: 'Explore custom software engineering, website development, mobile apps, business automation, and tech consulting in Ratnagiri by AiSync Software Solutions.',
     canonicalPath: '/services',
   });
 

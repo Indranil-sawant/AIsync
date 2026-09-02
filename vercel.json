@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aisyncsoftware.in"
+        }
+      ],
+      "destination": "https://aisyncsoftware.in/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/",
@@ -37,7 +50,7 @@
       ]
     },
     {
-      "source": "/(images|favicon\\.svg|site\\.webmanifest)(.*)",
+      "source": "/(images|favicon.*|apple-touch-icon.*|site\\.webmanifest)(.*)",
       "headers": [
         {
           "key": "Cache-Control",

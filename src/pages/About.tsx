@@ -6,7 +6,7 @@ import { usePageSEO } from '../hooks/usePageSEO';
 
 export const About: React.FC = () => {
   usePageSEO({
-    title: 'About Us | AiSync Software Solutions — Engineering Leadership in Ratnagiri',
+    title: 'About Us | AiSync Software Solutions — Ratnagiri',
     description: 'Learn about AiSync Software Solutions in Ratnagiri, Maharashtra. We engineer high-performance software, custom web applications, and automated systems.',
     canonicalPath: '/about',
   });
