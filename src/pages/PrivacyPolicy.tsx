@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 export const PrivacyPolicy: React.FC = () => {
   usePageSEO({
-    title: 'Privacy Policy & Data Security — AIsync Software Solutions',
-    description: 'Review data protection commitments, strict NDA non-disclosure protocols, and client privacy policies for AIsync Software Solutions in Ratnagiri, Maharashtra.',
+    title: 'Privacy Policy | AiSync Software Solutions',
+    description: 'Review data protection practices, client confidentiality protocols, and privacy policies of AiSync Software Solutions in Ratnagiri, Maharashtra.',
     canonicalPath: '/privacy',
   });
 

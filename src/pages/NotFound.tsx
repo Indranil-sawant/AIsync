@@ -6,8 +6,8 @@ import { Terminal, Home } from 'lucide-react';
 
 export const NotFound: React.FC = () => {
   usePageSEO({
-    title: '404: Page Not Found — AIsync Software Solutions',
-    description: 'The requested URL does not exist on AIsync Software Solutions.',
+    title: 'Page Not Found | AiSync Software Solutions',
+    description: 'The requested page could not be found on AiSync Software Solutions.',
     canonicalPath: '/404',
     noIndex: true,
   });

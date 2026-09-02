@@ -18,8 +18,8 @@ import {
 
 export const Home: React.FC = () => {
   usePageSEO({
-    title: 'AIsync Software Solutions — Software & Website Development Company in Ratnagiri',
-    description: 'AIsync Software Solutions is the premier software development & website design company in Ratnagiri, Maharashtra. Founded by Indranil Amar Sawant, delivering custom web apps, e-commerce, and business automation.',
+    title: 'AiSync Software Solutions | Software & Website Development in Ratnagiri',
+    description: 'AiSync Software Solutions is a software development and website design company in Ratnagiri, Maharashtra, building modern, fast, and scalable digital solutions.',
     canonicalPath: '/',
   });
 

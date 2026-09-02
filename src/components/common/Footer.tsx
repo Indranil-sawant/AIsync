@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-text-tertiary gap-4">
-          <p>© {currentYear} Indranil Amar Sawant — AIsync Software Solutions. All rights reserved.</p>
+          <p>© {currentYear} Indranil Amar Sawant — AiSync Software Solutions. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-text-secondary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-text-secondary transition-colors">Terms of Service</Link>

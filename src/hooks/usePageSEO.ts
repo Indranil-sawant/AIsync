@@ -4,15 +4,18 @@ interface SEOProps {
   title: string;
   description: string;
   canonicalPath?: string;
+  ogImage?: string;
   noIndex?: boolean;
 }
 
 const BASE_URL = 'https://aisyncsoftware.in';
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-image.png`;
 
 export const usePageSEO = ({
   title,
   description,
   canonicalPath = '',
+  ogImage = DEFAULT_OG_IMAGE,
   noIndex = false,
 }: SEOProps) => {
   useEffect(() => {
@@ -58,12 +61,18 @@ export const usePageSEO = ({
     setLinkTag('canonical', fullCanonicalUrl);
 
     // Open Graph Tags
+    const fullOgImage = ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
+    setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'AiSync Software Solutions');
     setMetaTag('meta[property="og:title"]', 'property', 'og:title', title);
     setMetaTag('meta[property="og:description"]', 'property', 'og:description', description);
     setMetaTag('meta[property="og:url"]', 'property', 'og:url', fullCanonicalUrl);
+    setMetaTag('meta[property="og:image"]', 'property', 'og:image', fullOgImage);
+    setMetaTag('meta[property="og:image:secure_url"]', 'property', 'og:image:secure_url', fullOgImage);
 
     // Twitter Card Tags
+    setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
     setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', title);
     setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', description);
-  }, [title, description, canonicalPath, noIndex]);
+    setMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image', fullOgImage);
+  }, [title, description, canonicalPath, ogImage, noIndex]);
 };

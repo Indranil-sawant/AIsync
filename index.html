@@ -8,18 +8,27 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-JPXF6EHEG3');
+      // Configure Google Analytics without triggering an unmanaged initial pageview
+      gtag('config', 'G-JPXF6EHEG3', {
+        send_page_view: false
+      });
     </script>
 
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Primary Meta & Robots Directives -->
-    <title>AIsync Software Solutions — Software & Website Development Company in Ratnagiri</title>
-    <meta name="description" content="AIsync Software Solutions is the premier software development & website design company in Ratnagiri, Maharashtra. Founded by Indranil Amar Sawant, delivering custom web apps, e-commerce, and business automation." />
-    <meta name="keywords" content="Software Company in Ratnagiri, Website Development Ratnagiri, Web App Developer Ratnagiri, Business Automation Ratnagiri, Software Engineers Ratnagiri Maharashtra, Indranil Sawant Software" />
-    <meta name="author" content="Indranil Amar Sawant" />
+    <!-- Favicons & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Primary Meta & Search Directives -->
+    <title>AiSync Software Solutions | Software & Website Development in Ratnagiri</title>
+    <meta name="description" content="AiSync Software Solutions is a software development and website design company in Ratnagiri, Maharashtra, building modern, fast, and scalable digital solutions." />
+    <meta name="keywords" content="Software Development Ratnagiri, Website Development Ratnagiri, Web Design Ratnagiri, Custom Software Company Maharashtra, Business Automation Ratnagiri, AiSync Software Solutions" />
+    <meta name="author" content="AiSync Software Solutions" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#fcfbf9" />
     <link rel="canonical" href="https://aisyncsoftware.in/" />
@@ -35,30 +44,32 @@
     <meta name="google-site-verification" content="PDZHZNTy4ebpFWW3cZxO9dro59-3VnsKdtIRzlz8Lnw" />
 
     <!-- Open Graph / Social Sharing -->
-    <meta property="og:site_name" content="AIsync Software Solutions" />
+    <meta property="og:site_name" content="AiSync Software Solutions" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_IN" />
-    <meta property="og:title" content="AIsync Software Solutions — Software & Website Development in Ratnagiri" />
-    <meta property="og:description" content="Custom web applications, e-commerce portals, and business automation engineered in Ratnagiri, Maharashtra." />
+    <meta property="og:title" content="AiSync Software Solutions | Software & Website Development in Ratnagiri" />
+    <meta property="og:description" content="AiSync Software Solutions is a software development and website design company in Ratnagiri, Maharashtra, building modern, fast, and scalable digital solutions." />
     <meta property="og:url" content="https://aisyncsoftware.in/" />
-    <meta property="og:image" content="https://aisyncsoftware.in/images/aorr-screenshot.png" />
+    <meta property="og:image" content="https://aisyncsoftware.in/images/og-image.png" />
+    <meta property="og:image:secure_url" content="https://aisyncsoftware.in/images/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="AIsync Software Solutions — Engineering in Ratnagiri" />
+    <meta property="og:image:alt" content="AiSync Software Solutions — Software & Website Development in Ratnagiri" />
 
     <!-- Twitter / X Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AIsync Software Solutions — Software & Website Development in Ratnagiri" />
-    <meta name="twitter:description" content="Custom web applications, e-commerce portals, and business automation engineered in Ratnagiri, Maharashtra." />
-    <meta name="twitter:image" content="https://aisyncsoftware.in/images/aorr-screenshot.png" />
-    <meta name="twitter:image:alt" content="AIsync Software Solutions" />
+    <meta name="twitter:title" content="AiSync Software Solutions | Software & Website Development in Ratnagiri" />
+    <meta name="twitter:description" content="AiSync Software Solutions is a software development and website design company in Ratnagiri, Maharashtra, building modern, fast, and scalable digital solutions." />
+    <meta name="twitter:image" content="https://aisyncsoftware.in/images/og-image.png" />
+    <meta name="twitter:image:alt" content="AiSync Software Solutions — Software & Website Development in Ratnagiri" />
 
     <!-- Typography: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Schema.org JSON-LD Graph: WebSite, Organization & ProfessionalService -->
+    <!-- Schema.org JSON-LD Graph: WebSite, Organization & LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,19 +78,32 @@
           "@type": "WebSite",
           "@id": "https://aisyncsoftware.in/#website",
           "url": "https://aisyncsoftware.in/",
-          "name": "AIsync Software Solutions",
-          "description": "Premier software development and website design company in Ratnagiri, Maharashtra.",
-          "inLanguage": "en-IN"
+          "name": "AiSync Software Solutions",
+          "description": "Software development and website design company in Ratnagiri, Maharashtra.",
+          "inLanguage": "en-IN",
+          "publisher": {
+            "@id": "https://aisyncsoftware.in/#organization"
+          }
         },
         {
           "@type": "Organization",
           "@id": "https://aisyncsoftware.in/#organization",
-          "name": "AIsync Software Solutions",
+          "name": "AiSync Software Solutions",
+          "legalName": "AiSync Software Solutions",
           "url": "https://aisyncsoftware.in/",
-          "logo": "https://aisyncsoftware.in/favicon.svg",
+          "logo": "https://aisyncsoftware.in/images/aisync-logo.png",
+          "image": "https://aisyncsoftware.in/images/og-image.png",
+          "description": "AiSync Software Solutions is a premier software development and website design firm in Ratnagiri, Maharashtra, engineering high-performance web applications, custom digital systems, and automation.",
           "founder": {
             "@type": "Person",
             "name": "Indranil Amar Sawant"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ratnagiri",
+            "addressRegion": "Maharashtra",
+            "postalCode": "415612",
+            "addressCountry": "IN"
           },
           "contactPoint": {
             "@type": "ContactPoint",
@@ -91,10 +115,11 @@
           }
         },
         {
-          "@type": "ProfessionalService",
-          "@id": "https://aisyncsoftware.in/#service",
-          "name": "AIsync Software Solutions",
-          "image": "https://aisyncsoftware.in/images/aorr-screenshot.png",
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": "https://aisyncsoftware.in/#localbusiness",
+          "name": "AiSync Software Solutions",
+          "image": "https://aisyncsoftware.in/images/og-image.png",
+          "logo": "https://aisyncsoftware.in/favicon.svg",
           "url": "https://aisyncsoftware.in/",
           "telephone": "+919975046416",
           "email": "indranilsawant07@gmail.com",
@@ -132,22 +157,22 @@
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Software Development Services",
+            "name": "Software Development & Digital Services",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Website Development in Ratnagiri",
-                  "description": "High-performance business websites, e-commerce, and client portals."
+                  "name": "Website Development & Web Design in Ratnagiri",
+                  "description": "Modern, fast, and responsive business websites, client portals, and e-commerce platforms."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Application Development & E-Commerce",
-                  "description": "Custom web and mobile applications tailored to business operations."
+                  "name": "Custom Software Engineering",
+                  "description": "Bespoke web applications, SaaS platforms, backend architectures, and database systems."
                 }
               },
               {
@@ -155,15 +180,15 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Business Process Automation",
-                  "description": "Workflow automation, spreadsheet sync, and data pipelines."
+                  "description": "Intelligent automated workflows, data sync pipelines, and operational tools."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Technology Consulting",
-                  "description": "System architecture planning, digital roadmaps, and technical consulting."
+                  "name": "Technology Consulting & System Architecture",
+                  "description": "Technical roadmapping, software advisory, and cloud infrastructure consulting."
                 }
               }
             ]

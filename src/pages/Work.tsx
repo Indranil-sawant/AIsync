@@ -7,8 +7,8 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export const Work: React.FC = () => {
   usePageSEO({
-    title: 'Client Case Studies & Verified Engineering Portfolio — AIsync Ratnagiri',
-    description: 'Real-world software systems, e-commerce storefronts, export lead engines, and industrial web applications designed and built by AIsync in Ratnagiri, Maharashtra.',
+    title: 'Work & Case Studies | AiSync Software Solutions — Ratnagiri',
+    description: 'Explore real-world software engineering case studies, web applications, e-commerce storefronts, and automated business systems built by AiSync in Ratnagiri.',
     canonicalPath: '/work',
   });
 

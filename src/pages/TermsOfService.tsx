@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 export const TermsOfService: React.FC = () => {
   usePageSEO({
-    title: 'Terms of Service & Project Governance — AIsync Software Solutions',
-    description: 'Commercial terms of service, intellectual property assignments, client warranties, and project execution policies of AIsync Software Solutions.',
+    title: 'Terms of Service | AiSync Software Solutions',
+    description: 'Review commercial terms of service, intellectual property assignments, client warranties, and project governance of AiSync Software Solutions.',
     canonicalPath: '/terms',
   });
 
