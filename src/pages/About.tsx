@@ -7,7 +7,7 @@ import { usePageSEO } from '../hooks/usePageSEO';
 export const About: React.FC = () => {
   usePageSEO({
     title: 'About Us | AiSync Software Solutions — Engineering Leadership in Ratnagiri',
-    description: 'Learn about AiSync Software Solutions, founded by Indranil Amar Sawant in Ratnagiri, Maharashtra. Engineering high-performance software with zero jargon.',
+    description: 'Learn about AiSync Software Solutions in Ratnagiri, Maharashtra. We engineer high-performance software, custom web applications, and automated systems.',
     canonicalPath: '/about',
   });
 

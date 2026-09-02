@@ -7,7 +7,7 @@ import { Mail, Clock, ShieldCheck, PhoneCall, MapPin } from 'lucide-react';
 export const Contact: React.FC = () => {
   usePageSEO({
     title: 'Contact Us | AiSync Software Solutions — Ratnagiri Software Consultation',
-    description: 'Get in touch with AiSync Software Solutions in Ratnagiri, Maharashtra. Connect directly with founder Indranil Amar Sawant for custom software and websites.',
+    description: 'Get in touch with AiSync Software Solutions in Ratnagiri, Maharashtra. Schedule a technical consultation for custom software, web development, and automation.',
     canonicalPath: '/contact',
   });
 
