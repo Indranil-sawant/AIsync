@@ -28,9 +28,16 @@ export default {
           subtle: 'rgba(0, 0, 0, 0.08)',
           medium: 'rgba(0, 0, 0, 0.15)',
           accent: 'rgba(79, 70, 229, 0.4)',
+        },
+        brand: {
+          navy: '#0f172a',
+          blue: '#2563eb',
+          cobalt: '#1d4ed8',
+          slate: '#1e293b',
         }
       },
       fontFamily: {
+        brand: ['Montserrat', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },

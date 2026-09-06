@@ -55,6 +55,7 @@ The **Aisync Software Solutions** design language is engineered for **premium te
 
 ```css
 :root {
+  --font-brand: 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 

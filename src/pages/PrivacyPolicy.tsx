@@ -28,7 +28,7 @@ export const PrivacyPolicy: React.FC = () => {
               Privacy Policy & Data Security
             </h1>
             <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              This Privacy Policy outlines how <strong className="text-text-primary">AIsync Software Solutions</strong> (founded and operated by <strong className="text-text-primary">Indranil Amar Sawant</strong>, Ratnagiri, Maharashtra, India) collects, processes, and protects your information when you interact with our website and software engineering services.
+              This Privacy Policy outlines how <strong className="text-text-primary">AIsync Software Solutions</strong> (founded and operated by <strong className="text-text-primary">Indranil Sawant</strong>, Ratnagiri, Maharashtra, India) collects, processes, and protects your information when you interact with our website and software engineering services.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export const PrivacyPolicy: React.FC = () => {
                 You have the right to request access to, correction of, or complete deletion of your stored inquiry data at any time.
               </p>
               <div className="pt-2 text-xs font-mono text-text-primary space-y-1">
-                <p><strong>Founder & CEO:</strong> Indranil Amar Sawant</p>
+                <p><strong>Founder & CEO:</strong> Indranil Sawant</p>
                 <p><strong>Operating Entity:</strong> AIsync Software Solutions</p>
                 <p><strong>Headquarters:</strong> Ratnagiri, Maharashtra, India</p>
                 <p><strong>Direct Phone:</strong> +91 9975046416</p>

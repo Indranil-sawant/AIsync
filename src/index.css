@@ -25,6 +25,7 @@
   --accent-glow: rgba(79, 70, 229, 0.12);
 
   /* Fonts */
+  --font-brand: 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Container } from './Container';
 import { Button } from '../ui/Button';
-import { Menu, X, ArrowUpRight, Cpu } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,19 +40,13 @@ export const Header: React.FC = () => {
     >
       <Container>
         <div className="flex items-center justify-between">
-          {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group select-none">
-            <div className="w-9 h-9 rounded-xl bg-white border border-border-medium flex items-center justify-center text-accent-primary group-hover:border-accent-primary transition-colors shadow-sm">
-              <Cpu className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-mono text-base font-bold tracking-tight text-text-primary group-hover:text-accent-primary transition-colors">
-                AISYNC<span className="text-accent-primary">.</span>
-              </span>
-              <span className="text-[10px] font-mono text-text-tertiary uppercase tracking-widest -mt-1">
-                SOFTWARE SOLUTIONS
-              </span>
-            </div>
+          {/* Official Brand Logo */}
+          <Link
+            to="/"
+            className="flex items-center group select-none focus:outline-none focus:ring-2 focus:ring-accent-primary/40 rounded-lg"
+            aria-label="AiSync Software Solutions Home"
+          >
+            <BrandLogo variant="horizontal" size="md" />
           </Link>
 
           {/* Desktop Navigation */}

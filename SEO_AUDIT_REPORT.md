@@ -67,7 +67,7 @@ The sitemap and internal linking matrix must strictly target these 7 canonical U
 | **Home (`/`)** | Commercial / Branded Discovery | Software & Website Development Company in Ratnagiri | Web design Ratnagiri, Custom software Maharashtra, Indranil Sawant, Business automation Konkan |
 | **Services (`/services`)** | Commercial Investigation | Software Development & Automation Services Ratnagiri | Custom web apps, E-commerce development, Google search SEO, Business digitalization |
 | **Work (`/work`)** | Social Proof / Portfolio Evaluation | Software Engineering Portfolio & Case Studies Ratnagiri | Bhavani Cashews, AORR, Hawksbill Technik, Globus Travel, Phoenix Technical, Arise Machine Tools |
-| **About (`/about`)** | Entity Verification & Trust | About AIsync Software Solutions Ratnagiri | Indranil Amar Sawant founder, Ratnagiri software firm, Engineering values, Tech consulting Maharashtra |
+| **About (`/about`)** | Entity Verification & Trust | About AIsync Software Solutions Ratnagiri | Indranil Sawant founder, Ratnagiri software firm, Engineering values, Tech consulting Maharashtra |
 | **Contact (`/contact`)** | High-Intent Lead Conversion | Hire Software Developers in Ratnagiri | Project inquiry, Web developer consultation Ratnagiri, Fixed quote software engineering |
 | **Privacy (`/privacy`)** | Legal / Trust Compliance | Privacy Policy & Data Protection AIsync | NDA confidentiality, Client data protection, Ratnagiri jurisdiction |
 | **Terms (`/terms`)** | Legal / Commercial Agreement | Terms of Service & Project Governance AIsync | Intellectual property rights, Software warranty, Commercial contract terms |
@@ -78,7 +78,7 @@ The sitemap and internal linking matrix must strictly target these 7 canonical U
 
 - **Current State:** `index.html` contains a single `ProfessionalService` JSON-LD block.
 - **Enhancement Opportunities:**
-  1. Enhance `ProfessionalService` / `LocalBusiness` schema with verified Opening Hours, PriceRange (`₹₹`), GeoCoordinates (`16.9902, 73.3120`), AreaServed (`Ratnagiri`, `Maharashtra`, `India`), Founder (`Indranil Amar Sawant`), and official telephone (`+919975046416`).
+  1. Enhance `ProfessionalService` / `LocalBusiness` schema with verified Opening Hours, PriceRange (`₹₹`), GeoCoordinates (`16.9902, 73.3120`), AreaServed (`Ratnagiri`, `Maharashtra`, `India`), Founder (`Indranil Sawant`), and official telephone (`+919975046416`).
   2. Implement `WebSite` schema declaring site name and canonical URL.
   3. Implement `Organization` schema declaring brand entity details.
   4. Ensure zero fabricated reviews, ratings, or awards.

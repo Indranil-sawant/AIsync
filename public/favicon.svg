@@ -1,7 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#0f172a"/>
-  <rect x="5.5" y="5.5" width="21" height="21" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
-  <rect x="10.5" y="10.5" width="11" height="11" rx="3" fill="#4f46e5" stroke="#a5b4fc" stroke-width="1"/>
-  <circle cx="16" cy="16" r="2" fill="#ffffff"/>
-  <path d="M16 1.5v4M16 26.5v4M1.5 16h4M26.5 16h4M10.5 1.5v4M10.5 26.5v4M21.5 1.5v4M21.5 26.5v4M1.5 10.5h4M26.5 10.5h4M1.5 21.5h4M26.5 21.5h4" stroke="#818cf8" stroke-width="1.5" stroke-linecap="round"/>
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Outer Navy Quadrants -->
+  <path d="M 108 18 A 82 82 0 0 1 182 92" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 182 108 A 82 82 0 0 1 108 182" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 92 182 A 82 82 0 0 1 18 108" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 18 92 A 82 82 0 0 1 92 18" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+
+  <!-- Quadrant Conduits -->
+  <path d="M 108 18 V 52" stroke="#2563eb" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 92 182 V 148" stroke="#2563eb" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 18 92 H 52" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+  <path d="M 182 108 H 148" stroke="#132247" stroke-width="12" stroke-linecap="square"/>
+
+  <!-- Inner Blue Ring -->
+  <path d="M 52 92 A 48 48 0 0 1 92 52" stroke="#2563eb" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 108 52 A 48 48 0 0 1 148 92" stroke="#2563eb" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 148 108 A 48 48 0 0 1 108 148" stroke="#2563eb" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 92 148 A 48 48 0 0 1 52 108" stroke="#2563eb" stroke-width="10" stroke-linecap="square"/>
+
+  <!-- Inner Spoke Connectors -->
+  <path d="M 100 52 V 68" stroke="#132247" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 100 148 V 132" stroke="#132247" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 52 100 H 68" stroke="#132247" stroke-width="10" stroke-linecap="square"/>
+  <path d="M 148 100 H 132" stroke="#132247" stroke-width="10" stroke-linecap="square"/>
+
+  <!-- Center Core -->
+  <g transform="rotate(-45 100 100)">
+    <rect x="62" y="79" width="76" height="42" rx="21" fill="none" stroke="#132247" stroke-width="10"/>
+    <rect x="65" y="82" width="70" height="36" rx="18" fill="#2563eb"/>
+    <path d="M 80 100 C 80 93 88 91 93 94 C 98 97 102 103 107 106 C 112 109 120 107 120 100 C 120 93 112 91 107 94 C 102 97 98 103 93 106 C 88 109 80 107 80 100 Z" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="89" cy="100" r="4" fill="#ffffff"/>
+    <circle cx="111" cy="100" r="4" fill="#ffffff"/>
+  </g>
 </svg>

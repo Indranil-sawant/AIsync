@@ -25,7 +25,7 @@ export const Contact: React.FC = () => {
                 Initiate an Engineering Consultation
               </h1>
               <p className="text-xs sm:text-sm text-text-secondary leading-relaxed">
-                Connect directly with our engineering leadership under Founder <strong className="text-text-primary">Indranil Amar Sawant</strong> to review your system requirements, technical scope, and product timeline.
+                Connect directly with our engineering leadership to review your system requirements, technical scope, and product timeline.
               </p>
             </div>
 

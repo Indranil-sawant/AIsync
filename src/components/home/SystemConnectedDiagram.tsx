@@ -1,4 +1,6 @@
-import { Globe, Smartphone, Workflow, Database, Zap, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { Globe, Smartphone, Workflow, Database, CheckCircle2 } from 'lucide-react';
+import { BrandMarkIcon } from '../common/BrandLogo';
 
 export const SystemConnectedDiagram: React.FC = () => {
   const nodes = [
@@ -28,11 +30,11 @@ export const SystemConnectedDiagram: React.FC = () => {
       {/* Central Hub Core */}
       <div className="p-4 rounded-xl bg-[#fbf9f5] border border-accent-primary/40 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center text-accent-primary shrink-0">
-            <Zap className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-lg bg-white border border-border-medium flex items-center justify-center shrink-0 shadow-sm">
+            <BrandMarkIcon size={26} />
           </div>
           <div>
-            <span className="text-xs font-mono font-bold text-text-primary block">
+            <span className="text-xs font-brand font-bold text-text-primary block">
               AISYNC SYSTEM CORE
             </span>
             <span className="text-[11px] font-mono text-text-secondary">

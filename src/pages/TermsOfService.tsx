@@ -28,7 +28,7 @@ export const TermsOfService: React.FC = () => {
               Terms of Service & Project Execution
             </h1>
             <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              These Terms of Service govern the access to and commercial engagement with <strong className="text-text-primary">AIsync Software Solutions</strong> (founded and operated by <strong className="text-text-primary">Indranil Amar Sawant</strong>, Ratnagiri, Maharashtra, India).
+              These Terms of Service govern the access to and commercial engagement with <strong className="text-text-primary">AIsync Software Solutions</strong> (founded and operated by <strong className="text-text-primary">Indranil Sawant</strong>, Ratnagiri, Maharashtra, India).
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export const TermsOfService: React.FC = () => {
                 These terms are governed by and construed in accordance with the laws of India. Any legal proceedings or disputes arising hereunder shall be subject to the exclusive jurisdiction of the competent courts in Ratnagiri, Maharashtra, India.
               </p>
               <div className="pt-2 text-xs font-mono text-text-primary space-y-1">
-                <p><strong>Legal Entity Founder:</strong> Indranil Amar Sawant</p>
+                <p><strong>Legal Entity Founder:</strong> Indranil Sawant</p>
                 <p><strong>Operating Firm:</strong> AIsync Software Solutions</p>
                 <p><strong>Headquarters:</strong> Ratnagiri, Maharashtra, India</p>
                 <p><strong>Direct Phone:</strong> +91 9975046416</p>

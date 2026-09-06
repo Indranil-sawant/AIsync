@@ -1,20 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="0%" stop-color="#070a13"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
-    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#4f46e5"/>
-    </linearGradient>
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+      <stop offset="0%" stop-color="#151f38" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0b1122" stop-opacity="0.95"/>
     </linearGradient>
-    <radialGradient id="glow" cx="80%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    <radialGradient id="glow" cx="75%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
@@ -23,48 +19,74 @@
   <rect width="1200" height="630" fill="url(#glow)"/>
 
   <!-- Inner High-End Card -->
-  <rect x="60" y="60" width="1080" height="510" rx="28" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+  <rect x="60" y="60" width="1080" height="510" rx="28" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.5"/>
 
-  <!-- Brand Mark Icon Box -->
-  <g transform="translate(120, 110)">
-    <rect width="84" height="84" rx="22" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
-    <rect x="20" y="20" width="44" height="44" rx="10" fill="#312e81" stroke="#818cf8" stroke-width="1.5"/>
-    <rect x="32" y="32" width="20" height="20" rx="5" fill="#4f46e5"/>
-    <circle cx="42" cy="42" r="3.5" fill="#ffffff"/>
-    <!-- Pins -->
-    <path d="M42 6v8M42 70v8M6 42h8M70 42h8M28 6v8M28 70v8M56 6v8M56 70v8M6 28h8M70 28h8M6 56h8M70 56h8" stroke="#818cf8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Official Brand Emblem Vector -->
+  <g transform="translate(120, 105)">
+    <!-- Outer Navy Quadrants -->
+    <path d="M 52 10 A 42 42 0 0 1 90 48" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 90 56 A 42 42 0 0 1 52 94" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 44 94 A 42 42 0 0 1 6 56" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 6 48 A 42 42 0 0 1 44 10" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+
+    <!-- Quadrant Conduits -->
+    <path d="M 52 10 V 27" stroke="#3b82f6" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 44 94 V 77" stroke="#3b82f6" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 6 48 H 23" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+    <path d="M 90 56 H 73" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+
+    <!-- Inner Blue Ring -->
+    <path d="M 23 48 A 24 24 0 0 1 44 27" stroke="#3b82f6" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 52 27 A 24 24 0 0 1 73 48" stroke="#3b82f6" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 73 56 A 24 24 0 0 1 52 77" stroke="#3b82f6" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 44 77 A 24 24 0 0 1 23 56" stroke="#3b82f6" stroke-width="5" stroke-linecap="square"/>
+
+    <!-- Inner Spoke Connectors -->
+    <path d="M 48 27 V 36" stroke="#ffffff" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 48 77 V 68" stroke="#ffffff" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 23 52 H 32" stroke="#ffffff" stroke-width="5" stroke-linecap="square"/>
+    <path d="M 73 52 H 64" stroke="#ffffff" stroke-width="5" stroke-linecap="square"/>
+
+    <!-- Center Core -->
+    <g transform="rotate(-45 48 52)">
+      <rect x="30" y="42" width="36" height="20" rx="10" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+      <rect x="31.5" y="43.5" width="33" height="17" rx="8.5" fill="#2563eb"/>
+      <path d="M 38 52 C 38 48 42 47 44 49 C 46 51 48 53 50 55 C 52 57 56 55 56 52 C 56 48 52 47 50 49 C 48 51 46 53 44 55 C 42 57 38 55 38 52 Z" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="42.5" cy="52" r="2" fill="#ffffff"/>
+      <circle cx="53.5" cy="52" r="2" fill="#ffffff"/>
+    </g>
   </g>
 
-  <!-- Brand Name Typography -->
-  <text x="230" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="1">AISYNC<tspan fill="#6366f1">.</tspan></text>
-  <text x="230" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#94a3b8" letter-spacing="4">SOFTWARE SOLUTIONS</text>
+  <!-- Brand Typography: AISYNC SOFTWARE SOLUTIONS -->
+  <text x="240" y="152" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="38" font-weight="900" fill="#ffffff" letter-spacing="1">AISYNC</text>
+  <text x="242" y="184" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="4.5">SOFTWARE SOLUTIONS</text>
 
   <!-- Geographic & Category Badge -->
   <g transform="translate(730, 126)">
-    <rect width="330" height="38" rx="19" fill="#1e1b4b" stroke="#4f46e5" stroke-width="1.2"/>
+    <rect width="330" height="38" rx="19" fill="#132247" stroke="#2563eb" stroke-width="1.2"/>
     <circle cx="20" cy="19" r="4.5" fill="#10b981"/>
-    <text x="36" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" letter-spacing="0.5">Ratnagiri, Maharashtra, India</text>
+    <text x="36" y="24" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0" letter-spacing="0.5">Ratnagiri, Maharashtra, India</text>
   </g>
 
   <!-- Main Statement / Hero Typography -->
-  <text x="120" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" fill="#f8fafc" letter-spacing="-1">
+  <text x="120" y="280" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="46" font-weight="800" fill="#f8fafc" letter-spacing="-1">
     Software &amp; Website Development
   </text>
-  <text x="120" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" fill="#818cf8" letter-spacing="-1">
+  <text x="120" y="340" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="46" font-weight="800" fill="#38bdf8" letter-spacing="-1">
     Engineered for Performance.
   </text>
 
   <!-- Subtitle Paragraph -->
-  <text x="120" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+  <text x="120" y="405" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
     Custom web applications, e-commerce platforms, business automation,
   </text>
-  <text x="120" y="432" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+  <text x="120" y="437" font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
     and digital systems built for modern enterprises.
   </text>
 
   <!-- Bottom Details & Domain -->
-  <g transform="translate(120, 485)">
-    <text x="0" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#6366f1" letter-spacing="1">https://aisyncsoftware.in</text>
-    <text x="730" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500" fill="#64748b">Verified Engineering Firm</text>
+  <g transform="translate(120, 490)">
+    <text x="0" y="25" font-family="'Montserrat', 'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#38bdf8" letter-spacing="1">https://aisyncsoftware.in</text>
+    <text x="730" y="25" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="500" fill="#64748b">Verified Engineering Firm</text>
   </g>
 </svg>

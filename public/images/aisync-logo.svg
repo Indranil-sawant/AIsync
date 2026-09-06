@@ -1,0 +1,43 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 180" width="700" height="180" fill="none">
+  <!-- Brand Emblem -->
+  <g transform="translate(15, 10)">
+    <!-- Outer Navy Quadrants -->
+    <path d="M 88 18 A 68 68 0 0 1 148 78" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 148 92 A 68 68 0 0 1 88 152" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 74 152 A 68 68 0 0 1 14 92" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 14 78 A 68 68 0 0 1 74 18" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+
+    <!-- Quadrant Conduits -->
+    <path d="M 88 18 V 44" stroke="#2563eb" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 74 152 V 124" stroke="#2563eb" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 14 78 H 44" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+    <path d="M 148 92 H 120" stroke="#132247" stroke-width="9" stroke-linecap="square"/>
+
+    <!-- Inner Blue Ring -->
+    <path d="M 44 78 A 38 38 0 0 1 74 44" stroke="#2563eb" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 88 44 A 38 38 0 0 1 120 78" stroke="#2563eb" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 120 92 A 38 38 0 0 1 88 124" stroke="#2563eb" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 74 124 A 38 38 0 0 1 44 92" stroke="#2563eb" stroke-width="7" stroke-linecap="square"/>
+
+    <!-- Inner Spoke Connectors -->
+    <path d="M 81 44 V 58" stroke="#132247" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 81 124 V 110" stroke="#132247" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 44 85 H 58" stroke="#132247" stroke-width="7" stroke-linecap="square"/>
+    <path d="M 120 85 H 106" stroke="#132247" stroke-width="7" stroke-linecap="square"/>
+
+    <!-- Center Core -->
+    <g transform="rotate(-45 81 85)">
+      <rect x="51" y="69" width="60" height="32" rx="16" fill="none" stroke="#132247" stroke-width="7"/>
+      <rect x="53" y="71" width="56" height="28" rx="14" fill="#2563eb"/>
+      <path d="M 64 85 C 64 80 70 78 74 81 C 78 84 81 88 85 90 C 89 92 95 90 95 85 C 95 80 89 78 85 81 C 81 84 78 88 74 90 C 70 92 64 90 64 85 Z" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="71" cy="85" r="3" fill="#ffffff"/>
+      <circle cx="89" cy="85" r="3" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Typography: AISYNC -->
+  <text x="200" y="98" font-family="'Montserrat', 'Inter', 'Segoe UI', sans-serif" font-size="78" font-weight="900" fill="#132247" letter-spacing="-1">AISYNC</text>
+  
+  <!-- Typography: SOFTWARE SOLUTIONS -->
+  <text x="204" y="138" font-family="'Montserrat', 'Inter', 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="#132247" letter-spacing="7.5">SOFTWARE SOLUTIONS</text>
+</svg>
