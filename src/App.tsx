@@ -39,6 +39,14 @@ const RouteFallback: React.FC = () => (
 );
 
 export const App: React.FC = () => {
+  useEffect(() => {
+    // Graceful handshake with initial preloader
+    const dismissPreloader = (window as unknown as { __AISYNC_DISMISS_PRELOADER__?: () => void }).__AISYNC_DISMISS_PRELOADER__;
+    if (typeof dismissPreloader === 'function') {
+      dismissPreloader();
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <RouteListener />
