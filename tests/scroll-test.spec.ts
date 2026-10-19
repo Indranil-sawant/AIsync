@@ -1,6 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test('Inspect what happens when scrolling directly into view under Slow 3G', async ({ page }) => {
+test('Inspect what happens when scrolling directly into view under Slow 3G', async ({ page, browserName }) => {
+  // CDP is proprietary to Chromium; skip on Firefox / WebKit
+  test.skip(browserName !== 'chromium', 'CDP session is only available in Chromium');
+
+  // Mark test as slow early to triple timeout for network throttling and navigation
+  test.slow();
+
   const client = await page.context().newCDPSession(page);
 
   await client.send('Network.emulateNetworkConditions', {
@@ -13,9 +19,6 @@ test('Inspect what happens when scrolling directly into view under Slow 3G', asy
 
   console.log('Navigating under Slow 3G to https://aisyncsoftware.in/ ...');
   await page.goto('https://aisyncsoftware.in/', { waitUntil: 'domcontentloaded', timeout: 60000 });
-
-  // Mark test as slow (triples the default 30s timeout to 90s) to accommodate Slow 3G network emulation
-  test.slow();
 
   const sections = [
     { name: 'SeeItInAction', locator: page.getByRole('heading', { name: /See It In Action/i }) },

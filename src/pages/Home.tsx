@@ -3,6 +3,7 @@ import { Container } from '../components/common/Container';
 import { Button } from '../components/ui/Button';
 import { HeroSection } from '../components/home/HeroSection';
 import { ServicesOverview } from '../components/home/ServicesOverview';
+import { ConnectedEcosystemSection } from '../components/home/ConnectedEcosystemSection';
 import { SeeItInActionMobileShowcase } from '../components/home/SeeItInActionMobileShowcase';
 import { ProcessTimeline } from '../components/home/ProcessTimeline';
 import { BusinessFaq } from '../components/home/BusinessFaq';
@@ -29,10 +30,13 @@ export const Home: React.FC = () => {
       {/* SECTION 01 — HERO */}
       <HeroSection />
 
-      {/* SECTION 02 — CORE CAPABILITIES (BUILD | AUTOMATE | GROW | CUSTOM) */}
+      {/* SECTION 02 — CONNECTED ECOSYSTEM & UPDATES (3D HALFTONE GLOBE SHOWCASE) */}
+      <ConnectedEcosystemSection />
+
+      {/* SECTION 03 — CORE CAPABILITIES (BUILD | AUTOMATE | GROW | CUSTOM) */}
       <ServicesOverview />
 
-      {/* SECTION 03 — SEE IT IN ACTION (SCROLL-DRIVEN 3-DEVICE SHOWCASE) */}
+      {/* SECTION 04 — SEE IT IN ACTION (SCROLL-DRIVEN 3-DEVICE SHOWCASE) */}
       <SeeItInActionMobileShowcase />
 
       {/* SECTION 04 — SELECTED WORK */}

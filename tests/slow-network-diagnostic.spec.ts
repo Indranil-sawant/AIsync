@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Slow Network Rendering Diagnostics', () => {
-  test('Inspect section rendering under Slow 3G throttling', async ({ page }) => {
+  test('Inspect section rendering under Slow 3G throttling', async ({ page, browserName }) => {
+    test.skip(browserName !== 'chromium', 'CDP session is only available in Chromium');
     const client = await page.context().newCDPSession(page);
 
     // Emulate Slow 3G: 400ms latency, 400kbps download, 400kbps upload
